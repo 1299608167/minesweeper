@@ -5,9 +5,17 @@
     {
       "src": "app.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "static/styles.css",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/(index\\.html)?",
+      "dest": "/templates/index.html"
+    },
     {
       "src": "/static/(.*)",
       "dest": "/static/$1"
